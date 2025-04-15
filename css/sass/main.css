@@ -1,0 +1,10 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}body{font-family:Arial,sans-serif;background-color:navy;color:#fff}.dashboard{max-width:400px;margin:0 auto;padding:2rem}.dashboard-header{background-color:purple}.profile-section{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem}.profile-avatar{width:40px;height:40px;border-radius:50%}.timeframe-selector{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:1rem}.timeframe-button{cursor:pointer;padding:.5rem 1rem;background-color:rgba(0,0,0,0);border:none;color:inherit;-webkit-transition:background-color .3s ease;transition:background-color .3s ease}.timeframe-button.active{background-color:rgba(255,255,255,.1)}rem 1rem;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.timeframe-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}

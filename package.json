@@ -1,0 +1,15 @@
+{
+  "name": "time-tracking-dashboard-main",
+  "version": "1.0.0",
+  "description": "Dashboard UI",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass sass/main.scss css/styles.css",
+    "watch:sass": "sass --watch sass/main.scss:css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}
