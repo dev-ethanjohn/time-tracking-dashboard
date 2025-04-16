@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build:sass": "sass sass/main.scss css/styles.css",
-    "watch:sass": "sass --watch sass/main.scss:css/styles.css"
+    "watch:sass": "sass --watch sass/main.scss:css/styles.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,50 @@
+@use "./mixins";
+
+:root {
+  // *NOTE: COLORS
+  --clr-white: 0 100% 100%;
+  --clr-black: 0 0% 0%;
+
+  --clr-navy-950: 226 43% 10%;
+  --clr-navy-900: 235 46% 20%;
+  --clr-navy-800: 235 41% 34%;
+  --clr-navy-700: 236 100% 87%;
+
+  --clr-orange-300: 15, 100%, 70%;
+
+  --clr-purple-700: 264, 64%, 52%;
+  --clr-purple-600: 246, 80%, 60%;
+  --clr-purple-500: 235, 45%, 61%;
+
+  --clr-blue-300: 195, 74%, 62%;
+
+  --clr-pink-400: 348, 100%, 68%;
+
+  --clr-green-400: 145, 58%, 55%;
+
+  --clr-yellow-300: 43, 84%, 65%;
+
+  --clr-grey-200: 0, 0%, 85%;
+
+  //* NOTE: FONT FAMILY
+  /* font-family */
+  --ff-sans-normal: "Rubix", sans-serif;
+
+  //* NOTE: FONT SIZE
+  --fs-400: 2rem; /*32 px*/
+  --fs-300: 1.5rem; /*24 px*/
+  --fs-200: 1.125rem; /* 18px*/
+  --fs-100: 0.9375rem; /* 15px*/
+}
+
+@include mixins.respond(tab-port) {
+  :root {
+    --fs-400: 3.5rem; /* 56px */
+  }
+}
+
+@include mixins.respond(desktop) {
+  :root {
+    --fs-300: 2.5rem; /* 40px */
+  }
+}

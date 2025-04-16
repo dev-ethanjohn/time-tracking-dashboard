@@ -1,53 +1,96 @@
 /* General Styles */
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --clr-white: 0 100% 100%;
+  --clr-black: 0 0% 0%;
+  --clr-navy-950: 226 43% 10%;
+  --clr-navy-900: 235 46% 20%;
+  --clr-navy-800: 235 41% 34%;
+  --clr-navy-700: 236 100% 87%;
+  --clr-orange-300: 15, 100%, 70%;
+  --clr-purple-700: 264, 64%, 52%;
+  --clr-purple-600: 246, 80%, 60%;
+  --clr-purple-500: 235, 45%, 61%;
+  --clr-blue-300: 195, 74%, 62%;
+  --clr-pink-400: 348, 100%, 68%;
+  --clr-green-400: 145, 58%, 55%;
+  --clr-yellow-300: 43, 84%, 65%;
+  --clr-grey-200: 0, 0%, 85%;
+  /* font-family */
+  --ff-sans-normal: "Rubix", sans-serif;
+  --fs-400: 2rem; /*32 px*/
+  --fs-300: 1.5rem; /*24 px*/
+  --fs-200: 1.125rem; /* 18px*/
+  --fs-100: 0.9375rem; /* 15px*/
+}
+
+@media only screen and (min-width: 37.5em) {
+  :root {
+    --fs-400: 3.5rem; /* 56px */
+  }
+}
+@media only screen and (min-width: 75em) {
+  :root {
+    --fs-300: 2.5rem; /* 40px */
+  }
+}
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: navy;
-  color: white;
-}
-
-.dashboard {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-.dashboard-header {
-  background-color: purple;
-}
-
-.profile-section {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(var(--clr-navy-950));
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  min-height: 100vh;
 }
 
-.profile-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+img {
+  /* https://www.youtube.com/watch?v=345V2MU3E_w */
+  font-style: italic;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-.timeframe-selector {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
 }
 
-.timeframe-button {
+li {
+  list-style-type: none;
+}
+
+button {
+  display: inline;
+  all: unset;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  transition: background-color 0.3s ease;
 }
-.timeframe-button.active {
-  background-color: rgba(255, 255, 255, 0.1);
+
+body {
+  color: hsl(var(--clr-white));
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-100);
+  font-weight: normal;
+}
+
+.dashboard-header {
+  display: grid;
+  row-gap: 1.5rem;
+  background-color: hsl(var(--clr-navy-900));
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

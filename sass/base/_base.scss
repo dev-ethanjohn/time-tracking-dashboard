@@ -1,0 +1,49 @@
+@use "../abstracts/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: hsl(var(--clr-navy-950));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  /* https://www.youtube.com/watch?v=345V2MU3E_w */
+  font-style: italic;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  display: inline;
+  all: unset;
+  cursor: pointer;
+}
