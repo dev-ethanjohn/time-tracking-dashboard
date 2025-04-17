@@ -83,6 +83,10 @@
       display: grid;
       row-gap: 1rem;
     }
+
+    &:hover {
+      background-color: hsl(var(--clr-navy-800));
+    }
   }
 
   &__header {

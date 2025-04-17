@@ -260,6 +260,9 @@ body {
     row-gap: 1rem;
   }
 }
+.activity-card__info:hover {
+  background-color: hsl(var(--clr-navy-800));
+}
 .activity-card__header {
   display: flex;
   justify-content: space-between;
