@@ -1,8 +1,26 @@
+@use "../abstracts/mixins";
+
 .timeframe-selector {
   padding: 1.5rem 0;
-  display: flex;
-  justify-content: space-around;
   color: hsl(var(--clr-purple-500));
+  font-size: var(--fs-200);
+
+  @include mixins.respond(desktop) {
+    padding: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 21px;
+    width: 100%;
+    justify-content: space-around;
+
+    @include mixins.respond(desktop) {
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 21px;
+    }
+  }
 }
 
 .active {

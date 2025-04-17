@@ -94,11 +94,25 @@ body {
   border-radius: 1rem;
   gap: 1.5rem;
 }
+@media only screen and (min-width: 75em) {
+  .profile-section {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: start;
+    padding: 2rem 0 5.75rem 2rem;
+  }
+}
 .profile-section__avatar {
   height: 4rem;
   width: 4rem;
   border: 3px solid white;
   border-radius: 50%;
+}
+@media only screen and (min-width: 75em) {
+  .profile-section__avatar {
+    height: 4.875rem;
+    width: 4.875rem;
+  }
 }
 .profile-section__description {
   font-size: var(--fs-100);
@@ -115,12 +129,35 @@ body {
   color: hsl(var(--clr-white));
   line-height: 28px;
 }
+@media only screen and (min-width: 75em) {
+  .profile-section__name {
+    line-height: 47px;
+    margin-top: 0;
+  }
+}
 
 .timeframe-selector {
   padding: 1.5rem 0;
-  display: flex;
-  justify-content: space-around;
   color: hsl(var(--clr-purple-500));
+  font-size: var(--fs-200);
+}
+@media only screen and (min-width: 75em) {
+  .timeframe-selector {
+    padding: 2rem;
+  }
+}
+.timeframe-selector__list {
+  display: flex;
+  gap: 21px;
+  width: 100%;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 75em) {
+  .timeframe-selector__list {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 21px;
+  }
 }
 
 .active {
@@ -133,13 +170,36 @@ body {
   border-radius: 1rem;
   overflow: hidden;
 }
+@media only screen and (min-width: 75em) {
+  .dashboard-header {
+    grid-column: 1/2;
+  }
+}
 
 .activity-grid {
   display: grid;
   row-gap: 1.5rem;
 }
+@media only screen and (min-width: 37.5em) {
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .activity-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 75em) {
+  .activity-grid {
+    grid-column: 2/5;
+  }
+}
 
 .activity-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 1rem;
   background-color: hsl(var(--clr-blue-300));
@@ -192,6 +252,13 @@ body {
   border-radius: 1rem;
   position: relative;
   z-index: 1;
+  margin-top: auto;
+}
+@media only screen and (min-width: 37.5em) {
+  .activity-card__info {
+    display: grid;
+    row-gap: 1rem;
+  }
 }
 .activity-card__header {
   display: flex;
@@ -216,8 +283,20 @@ body {
   font-weight: 300;
   line-height: 38px;
 }
+@media only screen and (min-width: 37.5em) {
+  .activity-card__stats .activity-card__time {
+    line-height: 66px;
+  }
+}
 .activity-card__stats .activity-card__previous {
   color: hsl(var(--clr-navy-200));
+  font-size: var(--fs-100);
+}
+@media only screen and (min-width: 37.5em) {
+  .activity-card__stats {
+    display: grid;
+    row-gap: 1rem;
+  }
 }
 
 @keyframes fadeIn {
@@ -241,6 +320,25 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
+  width: clamp(300px, 75%, 600px);
+}
+@media only screen and (min-width: 37.5em) {
+  .dashboard {
+    width: clamp(400px, 80%, 800px);
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  .dashboard {
+    width: clamp(500px, 80%, 1000px);
+  }
+}
+@media only screen and (min-width: 75em) {
+  .dashboard {
+    width: clamp(800px, 80%, 1120px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

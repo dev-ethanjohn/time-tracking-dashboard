@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 .profile-section {
   display: flex;
   align-items: center;
@@ -6,11 +8,23 @@
   border-radius: 1rem;
   gap: 1.5rem;
 
+  @include mixins.respond(desktop) {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: start;
+    padding: 2rem 0 5.75rem 2rem;
+  }
+
   &__avatar {
     height: 4rem;
     width: 4rem;
     border: 3px solid white;
     border-radius: 50%;
+
+    @include mixins.respond(desktop) {
+      height: 4.875rem;
+      width: 4.875rem;
+    }
   }
 
   &__description {
@@ -28,5 +42,10 @@
     margin-top: 0.5rem;
     color: hsl(var(--clr-white));
     line-height: 28px;
+
+    @include mixins.respond(desktop) {
+      line-height: 47px;
+      margin-top: 0;
+    }
   }
 }

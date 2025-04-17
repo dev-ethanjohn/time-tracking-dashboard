@@ -1,6 +1,25 @@
+@use "../abstracts/mixins";
+
 .dashboard {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
+
+  width: clamp(300px, 75%, 600px);
+
+  @include mixins.respond(tab-port) {
+    width: clamp(400px, 80%, 800px);
+  }
+
+  @include mixins.respond(tab-land) {
+    width: clamp(500px, 80%, 1000px);
+  }
+
+  @include mixins.respond(desktop) {
+    width: clamp(800px, 80%, 1120px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 }

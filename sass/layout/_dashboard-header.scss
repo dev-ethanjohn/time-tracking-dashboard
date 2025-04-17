@@ -1,6 +1,12 @@
+@use "../abstracts/mixins";
+
 .dashboard-header {
   display: grid;
   background-color: hsl(var(--clr-navy-900));
   border-radius: 1rem;
   overflow: hidden;
+
+  @include mixins.respond(desktop) {
+    grid-column: 1 / 2;
+  }
 }

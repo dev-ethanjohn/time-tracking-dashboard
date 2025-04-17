@@ -1,10 +1,27 @@
+@use "../abstracts/mixins";
+
 .activity-grid {
   display: grid;
   row-gap: 1.5rem;
+
+  @include mixins.respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @include mixins.respond(tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include mixins.respond(desktop) {
+    grid-column: 2 / 5;
+  }
 }
 
 // individual card
 .activity-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 1rem;
   background-color: hsl(var(--clr-blue-300));
@@ -60,6 +77,12 @@
     border-radius: 1rem;
     position: relative;
     z-index: 1;
+    margin-top: auto;
+
+    @include mixins.respond(tab-port) {
+      display: grid;
+      row-gap: 1rem;
+    }
   }
 
   &__header {
@@ -87,10 +110,20 @@
       font-size: var(--fs-400);
       font-weight: 300;
       line-height: 38px;
+
+      @include mixins.respond(tab-port) {
+        line-height: 66px;
+      }
     }
 
     .activity-card__previous {
       color: hsl(var(--clr-navy-200));
+      font-size: var(--fs-100);
+    }
+
+    @include mixins.respond(tab-port) {
+      display: grid;
+      row-gap: 1rem;
     }
   }
 }
