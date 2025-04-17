@@ -16,10 +16,9 @@ document
 
 // *create all activity card
 function displayActivityCards(timeframe) {
-  // clear grid
-  activityGrid.innerHTML = "";
+  // *NOTE:  in memory before final append
+  const fragment = document.createDocumentFragment();
 
-  // * create a card
   timeTrackingData.forEach((activity) => {
     const current = activity.timeframes[timeframe].current;
     const previous = activity.timeframes[timeframe].previous;
@@ -37,25 +36,43 @@ function displayActivityCards(timeframe) {
         break;
     }
 
-    const cardHTML = `
-      <li class="activity-card activity-card--${activity.title
-        .toLowerCase()
-        .replace(" ", "-")}">
-        <div class="activity-card__info">
-          <div class="activity-card__header">
-            <h3 class="activity-card__title">${activity.title}</h3>
-            <img class="activity-card__menu-icon" src="./images/icon-ellipsis.svg" alt="menu icon">
-          </div>
-          <div class="activity-card__stats">
-            <span class="activity-card__time">${current}hrs</span>
-            <small class="activity-card__previous">${previousPeriod} - ${previous}hrs</small>
-          </div>
+    const li = document.createElement("li");
+    li.className = `activity-card activity-card--${activity.title
+      .toLowerCase()
+      .replace(/ /g, "-")}`;
+
+    li.innerHTML = `
+      <div class="activity-card__info">
+        <div class="activity-card__header">
+          <h3 class="activity-card__title">${activity.title}</h3>
+          <span class="activity-card__menu-icon" aria-hidden="true"></span>
         </div>
-      </li>
+        <div class="activity-card__stats">
+          <span class="activity-card__time">${current}hrs</span>
+          <small class="activity-card__previous">${previousPeriod} - ${previous}hrs</small>
+        </div>
+      </div>
     `;
 
-    activityGrid.innerHTML += cardHTML;
+    li.style.setProperty(
+      "--background-image",
+      `url(../../images/icon-${activity.title
+        .toLowerCase()
+        .replace(/ /g, "-")}.svg)`
+    );
+
+    fragment.appendChild(li);
+
+    // * animation
+    const timeSpan = li.querySelector(".activity-card__time");
+    const previousSmall = li.querySelector(".activity-card__previous");
+
+    timeSpan.classList.add("animate-fade-in");
+    previousSmall.classList.add("animate-fade-in");
   });
+
+  activityGrid.innerHTML = ""; //* clear once
+  activityGrid.appendChild(fragment); //* inject once
 }
 
 // initially currentTimeFrame === "daily" as active

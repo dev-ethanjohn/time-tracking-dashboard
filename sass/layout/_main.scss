@@ -3,13 +3,20 @@
   row-gap: 1.5rem;
 }
 
-/* Activity Card Styles */
+// individual card
 .activity-card {
   overflow: hidden;
   border-radius: 1rem;
   background-color: hsl(var(--clr-blue-300));
   padding-top: 2.375rem;
   position: relative;
+
+  &__menu-icon {
+    background-image: url("../../images/icon-ellipsis.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
 
   &::before {
     content: "";
@@ -19,10 +26,29 @@
     width: 80px;
     height: 80px;
     margin: 0.375rem;
-    background-image: url("../../images/icon-play.svg");
+    background-image: var(--background-image);
     background-size: cover;
     background-position: center;
     border-radius: 0 0 0 1rem;
+  }
+
+  &--work {
+    background-color: hsl(var(--clr-orange-300));
+  }
+  &--play {
+    background-color: hsl(var(--clr-blue-300));
+  }
+  &--study {
+    background-color: hsl(var(--clr-pink-400));
+  }
+  &--exercise {
+    background-color: hsl(var(--clr-green-400));
+  }
+  &--social {
+    background-color: hsl(var(--clr-purple-700));
+  }
+  &--self-care {
+    background-color: hsl(var(--clr-yellow-300));
   }
 
   &__info {
@@ -67,4 +93,22 @@
       color: hsl(var(--clr-navy-200));
     }
   }
+}
+
+//* animation
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+    transform: translateY(4px);
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
 }
