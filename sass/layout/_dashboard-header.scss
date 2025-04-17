@@ -1,6 +1,6 @@
 .dashboard-header {
   display: grid;
-  row-gap: 1.5rem;
   background-color: hsl(var(--clr-navy-900));
   border-radius: 1rem;
+  overflow: hidden;
 }

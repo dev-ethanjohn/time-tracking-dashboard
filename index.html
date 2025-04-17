@@ -25,11 +25,12 @@
   <main class="dashboard">
     <header class="dashboard-header">
       <div class="profile-section">
-        <img src="images/image-jeremy.png" alt="Profile Picture of Jeremy" class="profile-avatar">
-        <h2 class="profile-name">Report for Jeremy Robson</h2>
+        <img src="images/image-jeremy.png" alt="Profile Picture of Jeremy" class="profile-section__avatar">
+        <h2 class="profile-section__description">Report for <span class="profile-section__name">Jeremy Robson</span>
+        </h2>
       </div>
       <nav class="timeframe-selector">
-        <button class="timeframe-button active" data-timeframe="weekly">Weekly</button>
+        <button class="timeframe-button" data-timeframe="weekly">Weekly</button>
         <button class="timeframe-button" data-timeframe="daily">Daily</button>
         <button class="timeframe-button" data-timeframe="monthly">Monthly</button>
       </nav>
@@ -37,14 +38,20 @@
 
     <ul class="activity-grid">
       <li class="activity-card">
-        <div class="activity-card__header">
-          <h3 class="activity-card__title">Work</h3>
-          <span class="activity-card__time">32hrs</span>
-          <small class="activity-card__previous">Last Week - 36hrs</small>
+        <div class="activity-card__info">
+          <div class="activity-card__header">
+            <h3 class="activity-card__title">Play</h3>
+            <img class="activity-card__menu-icon" src="./images/icon-ellipsis.svg" alt="menu icon">
+
+          </div>
+
+          <div class="activity-card__stats">
+            <span class="activity-card__time">10hrs</span>
+            <small class="activity-card__previous">Last Week - 36hrs</small>
+          </div>
         </div>
-        <div class="activity-card__body">
-          <p class="activity-card__value">32hrs</p>
-        </div>
+
+        <!-- 2nd activity card -->
       </li>
     </ul>
   </main>

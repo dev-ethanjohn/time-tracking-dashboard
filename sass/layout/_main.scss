@@ -1,5 +1,70 @@
-// .dashboard {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.activity-grid {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+/* Activity Card Styles */
+.activity-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: hsl(var(--clr-blue-300));
+  padding-top: 2.375rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.75rem;
+    right: 1rem;
+    width: 80px;
+    height: 80px;
+    margin: 0.375rem;
+    background-image: url("../../images/icon-play.svg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 0 1rem;
+  }
+
+  &__info {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: hsl(var(--clr-navy-900));
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .activity-card__title {
+      font-size: var(--fs-200);
+      font-weight: 500;
+    }
+
+    .activity-card__menu-icon {
+      height: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .activity-card__time {
+      font-size: var(--fs-400);
+      font-weight: 300;
+      line-height: 38px;
+    }
+
+    .activity-card__previous {
+      color: hsl(var(--clr-navy-200));
+    }
+  }
+}
