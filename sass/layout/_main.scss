@@ -124,12 +124,12 @@
       color: hsl(var(--clr-navy-200));
       font-size: var(--fs-100);
 
-      @media (max-width: 18.75em) {
+      @media (max-width: 24.75em) {
         font-size: 14px;
       }
     }
 
-    @media (max-width: 18.75em) {
+    @media (max-width: 24.75em) {
       display: grid;
       row-gap: 0.25rem;
     }

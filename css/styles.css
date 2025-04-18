@@ -152,7 +152,7 @@ body {
   width: 100%;
   justify-content: space-evenly;
 }
-@media (max-width: 18.75em) {
+@media (max-width: 24.75em) {
   .timeframe-selector__list {
     font-size: 1rem;
   }
@@ -300,12 +300,12 @@ body {
   color: hsl(var(--clr-navy-200));
   font-size: var(--fs-100);
 }
-@media (max-width: 18.75em) {
+@media (max-width: 24.75em) {
   .activity-card__stats .activity-card__previous {
     font-size: 14px;
   }
 }
-@media (max-width: 18.75em) {
+@media (max-width: 24.75em) {
   .activity-card__stats {
     display: grid;
     row-gap: 0.25rem;
