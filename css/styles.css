@@ -137,7 +137,7 @@ body {
 }
 
 .timeframe-selector {
-  padding: 1.5rem 0;
+  padding: 1.5rem;
   color: hsl(var(--clr-purple-500));
   font-size: var(--fs-200);
 }
@@ -151,6 +151,11 @@ body {
   gap: 21px;
   width: 100%;
   justify-content: space-evenly;
+}
+@media (max-width: 18.75em) {
+  .timeframe-selector__list {
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 75em) {
   .timeframe-selector__list {
@@ -295,6 +300,17 @@ body {
   color: hsl(var(--clr-navy-200));
   font-size: var(--fs-100);
 }
+@media (max-width: 18.75em) {
+  .activity-card__stats .activity-card__previous {
+    font-size: 14px;
+  }
+}
+@media (max-width: 18.75em) {
+  .activity-card__stats {
+    display: grid;
+    row-gap: 0.25rem;
+  }
+}
 @media only screen and (min-width: 37.5em) {
   .activity-card__stats {
     display: grid;
@@ -327,7 +343,7 @@ body {
 }
 @media only screen and (min-width: 37.5em) {
   .dashboard {
-    width: clamp(400px, 80%, 800px);
+    width: clamp(400px, 90%, 800px);
   }
 }
 @media only screen and (min-width: 56.25em) {
