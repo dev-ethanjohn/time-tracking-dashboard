@@ -6,7 +6,7 @@
   gap: 1.5rem;
   padding: 1.5rem;
 
-  width: clamp(300px, 75%, 600px);
+  width: clamp(300px, 90%, 600px);
 
   @include mixins.respond(tab-port) {
     width: clamp(400px, 80%, 800px);

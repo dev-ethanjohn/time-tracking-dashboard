@@ -150,7 +150,7 @@ body {
   display: flex;
   gap: 21px;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 @media only screen and (min-width: 75em) {
   .timeframe-selector__list {
@@ -323,7 +323,7 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
-  width: clamp(300px, 75%, 600px);
+  width: clamp(300px, 90%, 600px);
 }
 @media only screen and (min-width: 37.5em) {
   .dashboard {
