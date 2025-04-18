@@ -339,6 +339,7 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
+  margin-top: 5rem;
   width: clamp(300px, 90%, 600px);
 }
 @media only screen and (min-width: 37.5em) {
